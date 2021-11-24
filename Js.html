@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Js
+    </title>
+</head>
+<body>
+    <script>
+        let arr = [12,12,43,43,'top','top']
+        function unique(arr) {
+            let set = new Set(arr);
+            return set
+        }
+        console.log(unique(arr))
+
+
+        let array = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+        function aclean(arr) {
+            const map = new Map();
+            let set = new Set();
+
+            arr.forEach(item =>
+            {
+                map.set(item.toLowerCase().split('').sort().join(''), item)
+            })
+            for (const p of map.values()) {
+                set.add(p)
+            }                
+            return set
+        }
+        
+        console.log(aclean(array))
+    </script>
+</body>
+</html>
